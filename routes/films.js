@@ -3,8 +3,7 @@ var router = express.Router();
 var model = require('../models/index');
 /* GET home page. */
 router.post('/film', function(req, res, next) {
-	console.log("************************", model);
-
+	console.log(req.body);
 	model.Films.create({
 		title : req.body.title,
 		description: req.body.description,
